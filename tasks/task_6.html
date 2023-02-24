@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 6</title>
+  </head>
+
+  <body>
+    <h1>Задача 6</h1>
+    <p>Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком</p>
+    <script>
+      // 1. Вводимо необхідні дані
+      let output = 1
+      // 2. Цикил For
+      for (let t = 0; t < 3; t++) {
+        document.write('<table border="2px"; style=float:left; ')
+        for (let i = 0; i < 3; i++) {
+          document.write("<tr>")
+          for (let j = 0; j < 3; j++) {
+            document.write(`<td> ${output++} </td>`)
+          }
+          // 3. Виводимо результат
+          document.write("</tr> ")
+        }
+        document.write("</table>")
+      }
+    </script>
+  </body>
+</html>

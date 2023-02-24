@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 15</title>
+  </head>
+
+  <body>
+    <h1>Задача 15</h1>
+    <p>
+      Користувача поступово вводить показники температури протягом року. Знайти
+      середню температуру.
+    </p>
+    <script>
+      // 1. Вводимо необхідні дані
+      const YEARS = 365
+      let sum = 0
+      let degrees
+      //цикил for
+      for (let i = 1; i <= YEARS; i++) {
+        if (1 <= YEARS)
+          degrees = parseInt(prompt(`Введіть температуру ${i} день `))
+        sum = sum + degrees
+      }
+      // 3. Виводимо результат
+      document.write(`середня температура ${sum / YEARS} `)
+    </script>
+  </body>
+</html>

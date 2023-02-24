@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 5</title>
+  </head>
+
+  <body>
+    <h1>Задача 5</h1>
+    <p>Вивести таблицю</p>
+    <script>
+      document.write(`<table border="1px">`)
+      // 1. Вводимо необхідні дані
+      let output = 1
+      // 2. Цикил For
+      for (let i = 1; i <= 3; i++) {
+        document.write("<tr>")
+        if (output <= 8) output = 1
+        for (let j = 1; j <= 7; j++) {
+          document.write(`<td>${output++}</td>`)
+        }
+        // 3. Виводимо результат
+        document.write("</tr>")
+      }
+      document.write(`</table>`)
+    </script>
+  </body>
+</html>

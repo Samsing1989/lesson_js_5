@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1</title>
+  </head>
+
+  <body>
+    <h1>Задача 1</h1>
+    <p>
+      Вивести з використанням циклів маркований список з випадковими числами
+      (1-100). Кількість випадкових чисел вводиться користувачем. Приклад:
+    </p>
+    <ul>
+      <li>12</li>
+      <li>21</li>
+      <li>34</li>
+      <li>51</li>
+    </ul>
+    <script>
+      // 1. Вводимо необхідні дані
+      let min = 1,
+        max = 100
+      let userNumber = parseInt(prompt("Введіть кількість маркованих списків"))
+      //2. Цикил For
+      for (let i = 0; i < userNumber; i++) {
+        let rondomNum = min + Math.floor(Math.random() * max)
+
+        // 3. Виводимо результат
+        document.write(`<ul>
+			<li>${rondomNum}</li>
+		</ul>`)
+      }
+    </script>
+  </body>
+</html>

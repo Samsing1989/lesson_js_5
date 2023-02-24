@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 9</title>
+  </head>
+
+  <body>
+    <h1>Задача 9</h1>
+    <p>
+      Користувач загадує число. Комп’ютер задає питання поки не вгадає число
+      користувача (використати confirm).
+    </p>
+    <script>
+      // 1. Вводимо необхідні дані
+      let userSecretNumber = parseInt(
+        prompt("Загадайте ваше число, щоб я йог угадав від 1 до 10 ")
+      )
+      let rondomSecretNumber
+      let result
+      // 2. Цикил do while
+      do {
+        if (isNaN(userSecretNumber)) {
+          alert("Будласка введіть Ваше число")
+          userSecretNumber = parseInt(
+            prompt("Загадайте ваше число, щоб я йог угадав від 1 до 10")
+          )
+          continue
+        }
+        rondomSecretNumber = Math.floor(Math.random() * (userSecretNumber + 1))
+        // 3. Виводимо результат
+        result = confirm(`Це ваш результат ${rondomSecretNumber}`)
+      } while (!result)
+      document.write("Мені це вдалося!!!")
+    </script>
+  </body>
+</html>

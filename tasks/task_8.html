@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 8</title>
+  </head>
+
+  <body>
+    <h1>Задача 8</h1>
+    <p>
+      Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число
+      користувача (використати confirm).
+    </p>
+    <script>
+      // 1. Вводимо необхідні дані
+      let userSecretNumber = parseInt(
+        prompt("Загадайте ваше число, щоб я йог угадав від 1 - 10")
+      )
+      let rondomSecretNumber
+      let minSecretNumbe = 1
+      let maxSecretNumber = 10
+      let result
+      // 2. Цикил For
+      for (let i = 0; i < 3; i++) {
+        rondomSecretNumber =
+          minSecretNumbe +
+          Math.floor(Math.random() * (maxSecretNumber - minSecretNumbe + 1))
+        result = confirm(`Це ваш результат ${rondomSecretNumber}`)
+        if (result === true) {
+          document.write("Мені це вдалося!!!")
+          break
+        }
+      }
+      // 3. Виводимо результат
+      if (result === false) document.write("Нажаль я програв!!!")
+    </script>
+  </body>
+</html>
